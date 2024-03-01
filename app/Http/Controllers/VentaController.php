@@ -31,8 +31,8 @@ class VentaController extends Controller
         try {
             $validator = Validator::make($request->all(), [
                 'numVenta' => 'required|string|max:255',
-                'cliente_id' => 'required|exists:cliente,id',
-                'producto_id' => 'required|exists:producto,id',
+                'cliente_id' => 'required|exists:clientes,id',
+                'producto_id' => 'required|exists:productos,id',
                 'cantidad' => 'required|string|max:255',
             ]);
 
